@@ -13,6 +13,8 @@ import Dashboard from "./pages/Dashboard";
 import CompanyProfile from "./pages/CompanyProfile";
 import OpportunitySearch from "./pages/OpportunitySearch";
 import OpportunityDetail from "./pages/OpportunityDetail";
+import ProposalList from "./pages/ProposalList";
+import ProposalEditor from "./pages/ProposalEditor";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,11 @@ const App = () => (
             <Route path="/profile" element={<CompanyProfile />} />
             <Route path="/search" element={<OpportunitySearch />} />
             <Route path="/opportunities/:id" element={<OpportunityDetail />} />
+            
+            {/* Proposals */}
+            <Route path="/proposals" element={<ProposalList />} />
+            <Route path="/proposals/:id/edit" element={<ProposalEditor />} />
+            <Route path="/proposals/generate" element={<ProposalEditor />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
